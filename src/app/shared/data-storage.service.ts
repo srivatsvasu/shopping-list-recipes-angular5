@@ -19,7 +19,6 @@ export class DataStorageService {
   }
 
   getRecipes() {
-    let tk = '';
     const token = this.authService.getToken();
     this.http.get('https://ng-recipe-service.firebaseio.com/recipes.json?auth=' + token)
       .map(
